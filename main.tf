@@ -11,6 +11,7 @@ module "ec2" {
   source        = "./modules/ec2-instances"
   ami           = "ami-02ddb77f8f93ca4ca"       # Amazon Linux 2023 in ap-south-1
   instance_type = "t2.micro"
+  # Outputs can be Input for main.tf
   subnet_id     = module.vpc.public_subnet_id
 }
 
